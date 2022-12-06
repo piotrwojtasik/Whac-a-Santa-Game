@@ -222,6 +222,22 @@ border-radius: 0px 0px 30px 30px;
     justify-content: center;
 
 }
+.game-btn {
+    display: flex;
+    justify-content: center;
+}
+.main-info button {
+    width: 6rem;
+    height: 2rem;
+    background: linear-gradient(265.52deg, #CB2D3E 0.9%, #EF473A 95.02%);
+    border-radius: 20px;
+    border: 2px solid #ffffff1a; 
+    color: #fff;
+    font-weight: bold;
+}
+.main-info button:hover {
+    background: linear-gradient(265.52deg, #cb2d3da2 0.9%, #ef463a88 95.02%);
+}
 .power-info {
     width: 40%;
     display: flex;

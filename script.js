@@ -160,6 +160,10 @@ const stopMoleRotationInterval = () => {
     clearInterval(moleRotationIntervalId)
 
 }
+const playMusic = () => {
+    const audio = new Audio('./music.mp3')
+    audio.play()
+}
 
 
 const init = () => {
@@ -168,7 +172,13 @@ const init = () => {
     displayTime()
     startTimeInterval()
     startMoleRotationInterval()
+    playMusic()
 }
 
-init()
 
+
+
+
+function startGame(){
+    init()
+}
