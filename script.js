@@ -179,6 +179,6 @@ const init = () => {
 
 
 
-function startGame(){
+const startGame = () => {
     init()
 }
