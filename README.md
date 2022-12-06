@@ -1,2 +1,2 @@
 # Whac-a-Santa-Game
-Whac'a Santa Game
+https://piotrwojtasik.github.io/Whac-a-Santa-Game/
