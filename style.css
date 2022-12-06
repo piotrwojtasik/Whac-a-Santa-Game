@@ -1,0 +1,468 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background: #cb2d3e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ef473a, #cb2d3e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ef473a, #cb2d3e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100vh;
+
+}
+
+#header {
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    top:0;
+    left: -20rem;
+    transition: .5s;
+    background: linear-gradient(106.82deg, rgba(33, 81, 78, 0.8) 0%, rgba(67, 114, 126, 0.8) 99.52%);
+backdrop-filter: blur(10px);
+z-index: 100;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+#toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 60px;
+    height: 45px;
+    background: linear-gradient(106.82deg, rgba(255, 255, 255, 0.48) 0%, rgba(255, 255, 255, 0.12) 99.52%);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+}
+
+
+#toggle::before {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    background-color: #fff;
+    transform: translateY(-5px);
+    transition: 0.2s;
+}
+#toggle::after {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    background-color: #fff;
+    transform: translateY(5px);
+    transition: 0.2s;
+}
+
+#toggle.active::before {
+    transform: translateY(0px) rotate(45deg);
+}
+#toggle.active::after {
+    transform: translateY(0px)rotate(-45deg);
+}
+
+
+
+.space {
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:1.5rem;
+    color: #fff;
+}
+.space h1 {
+    font-family: 'Mountains of Christmas';
+    z-index: 1;
+}
+#header ul {
+    position: relative;
+
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20rem;
+}
+#header ul li {
+    display: inline-block;
+    height:10rem;
+    list-style: none;
+    width: 100%;
+    padding: 10px 40px;
+
+}
+#header ul li:hover {
+    cursor: pointer;
+    background: linear-gradient(106.82deg, rgba(33, 81, 78, 0.8) 0%, rgba(67, 114, 126, 0.8) 99.52%);
+backdrop-filter: blur(10px);
+}
+#header ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+}
+#header.active {
+    left:0px;
+}
+
+
+.game-section {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.game-info {
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer {
+
+}
+
+.screen {
+    height: 100%;
+    width: 80%;
+    background: linear-gradient(106.82deg, rgba(255, 255, 255, 0.48) 0%, rgba(255, 255, 255, 0.12) 99.52%);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    border: 3px solid #ffffff1a; 
+    box-sizing: border-box;
+
+
+}
+
+.info {
+
+    width: 80%;
+    margin-top: 5rem;
+    height: 100%;
+    background: linear-gradient(106.82deg, rgba(255, 255, 255, 0.48) 0%, rgba(255, 255, 255, 0.12) 99.52%);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    color: #fff;
+    font-family: Tahoma, sans-serif;
+    border: 3px solid #ffffff1a; 
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info h1 {
+    font-family: Tahoma, sans-serif;
+}
+
+.info h2 {
+    font-family: Tahoma, sans-serif;
+}
+.grass {
+    width: 100%;
+    position: fixed;
+    height: 5rem;
+    bottom: 0;
+    background: linear-gradient(106.82deg, rgba(33, 81, 78, 0.8) 0%, rgba(67, 114, 126, 0.8) 99.52%);
+backdrop-filter: blur(10px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 0px 0px 30px 30px;
+}
+
+#tree {
+    position: fixed;
+    bottom: 0;
+    width: 25em;
+
+}
+.personal-info {
+    height: 100%;
+    width: 20%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1rem;
+    align-items: center;
+
+}
+.user-info {
+    display: flex;
+}
+
+#avatar {
+    width: 8rem;
+}
+#premium {
+    text-transform: uppercase;
+    width: 120%;
+    height: 200%;
+    background: linear-gradient(265.52deg, #CB2D3E 0.9%, #EF473A 95.02%);
+    border-radius: 20px;
+    border: 2px solid #ffffff1a; 
+    color: #fff;
+    font-weight: bold;
+}
+.main-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    justify-content: center;
+
+}
+.power-info {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1rem;
+    align-items: center;
+    color: #43727E;
+}
+
+.bar-wrap {
+    width: 20em;
+    height: 37px;
+    background: linear-gradient(90.99deg, rgba(255, 255, 255, 0.55) 1.33%, rgba(255, 255, 255, 0.54) 99.83%);
+box-shadow: 7px 10px 9px rgba(0, 0, 0, 0.1);
+border-radius: 19px;
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+.bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.progress-bar {
+    height: 16px;
+    width: 183px;
+    background: linear-gradient(90.03deg, #3F7874 0.02%, #21514E 99.98%);
+border-radius: 20px;
+}
+.percent { 
+    font-weight: bold;
+}
+#sock {
+    position: fixed;
+    right: 1.5rem;
+    width: 5rem;
+    top: 1rem;
+}
+#man {
+    position: fixed;
+    z-index: 6;
+    bottom: 0px;
+    right: 1rem;
+    width: 7rem;
+}
+
+#sit {
+    width: 15rem;
+    position: absolute;
+    z-index: 10;
+    left: 4.5rem;
+    top: 0px;
+}
+
+.circle { 
+    box-sizing: border-box;
+position: absolute;
+background: linear-gradient(106.82deg, rgba(239, 71, 58, 0.3) 0%, rgba(255, 255, 255, 0.12) 99.52%);
+backdrop-filter: blur(50px);
+border-radius: 50%;
+transform: rotate(99.07deg);
+}
+
+#c-1 {
+    width: 40em;
+    height: 40em;
+    left: 305.5px;
+    top: 51.07px;
+}
+
+#c-2 {
+    width: 20em;
+height: 20em;
+right: 30.5px;
+bottom: 51.07px;
+}
+
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+    #man {
+        width: 5rem;
+    }
+    #sock {
+        width: 4rem;
+    }
+    #premium {
+        width: 100%;
+        height: 150%
+    }
+ }
+
+@media all and (min-width: 768px) and (max-width: 1024px) { 
+    #c-1 {
+        width: 15em;
+        height: 15em;
+    }
+    #c-2 {
+        width: 10em;
+        height: 10em;
+    }
+    #premium {
+        width: 80%;
+        height: 100%;
+        font-size: 10px;
+    }
+    #man {
+        width: 4rem;
+    }
+    
+        #sock {
+            display: none;
+        }
+    
+    .bar-wrap {
+        width: 12em;
+    }
+    .progress-bar {
+        width: 7em;
+    }
+    .power-info {
+        font-size: 13px;
+    }
+    #avatar {
+        width: 3rem;
+    }
+    .date {
+        display: none;
+    }
+    .main-info {
+        font-size: 10px;
+    }
+    #sit{
+        top: 3rem;
+        width: 9rem;
+    }
+}
+
+
+@media all and (min-width: 480px) and (max-width: 768px) { 
+    #c-1 {
+        display: none;
+    }
+    #c-2 {
+        display: none;
+    }
+    #premium {
+        width: 110%;
+        height: 110%;
+        font-size: 10px;
+    }
+    #man {
+        display: none;
+    }
+    
+        #sock {
+            display: none;
+        }
+    
+    .bar-wrap {
+        width: 7em;
+    }
+    .progress-bar {
+        width: 3em;
+    }
+    .power-info {
+        display: none;
+    }
+    #avatar {
+        width: 5rem;
+    }
+    .date {
+        display: none;
+    }
+    .main-info {
+        font-size: 10px;
+    }
+    #sit{
+        top: 4rem;
+        width: 7rem;
+        left: 2rem;
+    }
+    .user-info {
+        display: none;
+    }
+    .info {
+        justify-content: center;
+        column-gap: 1rem;
+    }
+}
+
+@media all and (max-width: 480px) {
+    #c-1 {
+        display: none;
+    }
+    #c-2 {
+        display: none;
+    }
+    #premium {
+        width: 110%;
+        height: 110%;
+        font-size: 10px;
+    }
+    #man {
+        display: none;
+    }
+    
+        #sock {
+            display: none;
+        }
+    
+    .bar-wrap {
+        width: 7em;
+    }
+    .progress-bar {
+        width: 3em;
+    }
+    .power-info {
+        display: none;
+    }
+    #avatar {
+        width: 5rem;
+    }
+    .date {
+        display: none;
+    }
+    .main-info {
+        font-size: 10px;
+    }
+    #sit{
+        top: 4rem;
+        width: 7rem;
+        left: 2rem;
+    }
+    .user-info {
+        display: none;
+    }
+    .info {
+        justify-content: center;
+        column-gap: 1rem;
+    }
+ }
