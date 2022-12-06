@@ -226,7 +226,7 @@ border-radius: 0px 0px 30px 30px;
     display: flex;
     justify-content: center;
 }
-.main-info button {
+.game-btn button {
     width: 6rem;
     height: 2rem;
     background: linear-gradient(265.52deg, #CB2D3E 0.9%, #EF473A 95.02%);
